@@ -331,10 +331,25 @@
                                 <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">Nombre y Apellido *</label>
                                 <input type="text" id="nombre" required class="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white outline-none focus:border-brand-blue transition-colors focus:ring-1 focus:ring-brand-blue">
                             </div>
-                            <div>
-                                <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">Empresa / Consorcio</label>
-                                <input type="text" id="empresa" class="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white outline-none focus:border-brand-blue transition-colors focus:ring-1 focus:ring-brand-blue">
-                            </div>
+<div>
+    <label class="block text-xs uppercase tracking-wider text-gray-500 mb-2 font-semibold">Empresa / Consorcio</label>
+    <div class="relative">
+        <select id="empresa" class="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white outline-none focus:border-brand-blue transition-colors appearance-none focus:ring-1 focus:ring-brand-blue cursor-pointer">
+            <option value="" disabled selected>Seleccione una empresa...</option>
+            <option value="YPF">⛽ YPF</option>
+            <option value="La Mantovana">🏢 La Mantovana</option>
+            <option value="Grupo Galeno">🏥 Grupo Galeno</option>
+            <option value="Administración Alfonso">💼 Administración Alfonso</option>
+            <option value="Administración Casarini">💼 Administración Casarini</option>
+            <option value="Administraciones Puerto Madero">🏙️ Administraciones Puerto Madero</option>
+            <option value="Fuerzas Armadas">🎖️ Armada, Fuerza Aérea y Ejército</option>
+            <option value="Particular/Otro">👤 Particular / Otro</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+            <i class="fas fa-chevron-down text-sm"></i>
+        </div>
+    </div>
+</div>
                         </div>
 
                         <div>
@@ -524,3 +539,4 @@
     </script>
 </body>
 </html>
+
