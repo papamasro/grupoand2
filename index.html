@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JC999NTKT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7JC999NTKT');
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRUPO AND | Construcción y Soluciones Integrales</title>
@@ -509,7 +518,15 @@
                 textoWhatsApp += `Direccion: ${direccion}\n`;
                 textoWhatsApp += `Rubro: ${rubro}\n`;
                 textoWhatsApp += `Descripcion: ${mensaje}\n`;
-                
+                // Registrar evento de compra en Google Analytics
+            if (typeof gtag === 'function') {
+                gtag('event', 'compra_whatsapp', {
+                    'event_category': 'Ventas',
+                    'event_label': 'Clic Finalizar Pedido',
+                    'value': total,
+                    'currency': 'ARS'
+                });
+            }
                 window.open(`https://wa.me/5491137606765?text=${encodeURIComponent(textoWhatsApp)}`, '_blank');
             });
         });
